@@ -1,0 +1,14 @@
+<launch>
+<!--
+    <node respwan="true" pkg="wt931" type="imu_node" name="joy_node">
+        <param name="serialport_name" type="string" value="/dev/wt931">
+        <param name="baudrate" type="int" value="921600">
+    </node>
+-->
+
+    <node pkg="wt931" type="main_cpp" name="main_cpp">
+        <param name="serialport_name" value="/dev/wt931" type="string"/>
+        <param name="baudrate" value="921600" type="int"/>
+        <param name="pub_topic_name" value="pub_topic_name" type="string"/>
+    </node>
+</launch>
